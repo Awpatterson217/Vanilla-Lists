@@ -1,9 +1,7 @@
 "use strict"
 
-// divs
 let app      = document.querySelector('#app');
 let lists    = document.querySelector('#lists');
-// buttons
 let newList   = document.querySelector('#newList');
 let listName  = document.querySelector('#listName');
 let listCount = 0;
@@ -79,7 +77,6 @@ let addList = function(){
   
   listName.value = '';
   
-  // Events
   addButton.addEventListener('click', function(){
     return addItem();
   });
@@ -89,8 +86,10 @@ let addList = function(){
   removeButton.addEventListener('click', function(){
     return removeItems();
   });
+  // If user hits enter
   input.addEventListener('keyup', function(e){
     e.preventDefault();
+
     if(e.keyCode === 13)
       return addButton.click();
   });
@@ -111,12 +110,12 @@ let addList = function(){
       return selectItem(e.target);
     });
 
-    input.value = '';
-
-    return;
+    return input.value = '';
   }
+
   let removeItems = function(){
     let removedCount = 0;
+    
     for(let counter = 0; counter < itemCount; counter++){
       if(list.childNodes[counter].classList.contains('selected')){
         list.removeChild(list.childNodes[counter]);
@@ -125,8 +124,10 @@ let addList = function(){
       }
     }
     itemCount = itemCount - removedCount;
+
     return;
   }
+
   let selectItem = function(item){
     if(!item.classList.contains('selected'))
       return item.className = 'selected';
@@ -136,13 +137,13 @@ let addList = function(){
   return;
 }
 
-// Events
 newList.addEventListener('click', function(){
   return addList();
 });
 // If user hits enter
 listName.addEventListener('keyup', function(e){
   e.preventDefault();
+
   if(e.keyCode === 13)
     return newList.click();
   });
