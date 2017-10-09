@@ -1,0 +1,82 @@
+.container{
+  display: flex;
+  justify-content: flex-start;
+  flex: 1;
+  padding: 5px;
+}
+.head{
+  position: fixed;
+  padding: 10px;
+}
+.lists{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 80%;
+  margin: 3em 0;
+  padding: 25px;
+  align-self: flex-end;
+}
+.list{
+  margin-top: 10px;
+  color: #025A02;
+  padding: 30px;
+  font-size: 26px;
+  list-style: none;
+}
+.listBody{
+  border: 1px solid #025A02;
+  background-color: rgb(253, 251, 251);
+  padding: 10px;
+  flex: 1;
+}
+.listContainer{
+    width: 85%;
+}
+.listDiv{
+  margin-top: 10px;
+  display: flex;
+}   
+.removeButton{
+    background-color: #F00202;
+    border: none;
+    margin-left: 40%;
+    margin-right: 40%;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;  
+    height: 3em;
+
+}
+#listName {
+  height: 2em;
+}
+.listTitle {
+  color: #025A02;
+  margin: 0 40%;
+}
+.createButton{
+  background-color: green;
+  border: none;
+  color: white;
+  display: inline-block;
+  padding: 0 15px;
+  font-size: 14px;
+  height: 2em;
+}
+.closeButton{
+    background-color: #F00202;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;  
+    height: 3em;
+}
+.selected{
+  background-color: #FCBB67;
+}
